@@ -7,7 +7,7 @@ void printf(char* str)
 		VideoMemory[i] = (VideoMemory[i] & 0xF00) | str[i];
 }
 
-void kernelMain(void* multiboot_structure, unsigned int magicnumber)
+extern "C" void kernelMain(void* multiboot_structure, unsigned int magicnumber)
 {
 	printf("Hello, World!");
 
